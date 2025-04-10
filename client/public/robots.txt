@@ -1,0 +1,12 @@
+# Robots.txt for CCD Intern Book
+
+User-agent: *
+Allow: /
+
+# Don't allow crawling of admin or private sections
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://ccd-blue-book.vercel.app/sitemap.xml

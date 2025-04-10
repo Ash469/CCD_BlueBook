@@ -158,6 +158,53 @@ ccd_internBook/
 └── tests/              # Test suite
 ```
 
+## Search Engine Optimization (SEO)
+
+To make the CCD Intern Book more discoverable to search engines and potential users, follow these SEO best practices:
+
+### Meta Tags Implementation
+
+Add the following meta tags to the `<head>` section of your HTML pages:
+
+```html
+<!-- Basic Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CCD Intern Book - A comprehensive platform for managing internship processes, applications, and communication at IIT Guwahati.">
+<meta name="keywords" content="internship management, IIT Guwahati, placement tracker, intern profiles, IITG placement, engineering internships, student placements">
+<meta name="author" content="Ayush Shandilya, Career & Counselling Division IITG">
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="Bluebook - IITG Internship & Placement Experience Platform">
+<meta property="og:description" content="Access internship and placement experiences shared by IIT Guwahati students to prepare for your interviews.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ccd-blue-book.vercel.app/">
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bluebook - IITG Internship & Placement Experience Platform">
+<meta name="twitter:description" content="Access internship and placement experiences shared by IIT Guwahati students to prepare for your interviews.">
+
+```
+
+### Sitemap Integration
+
+1. Create a `sitemap.xml` file in the public directory to help search engines discover and index your pages:
+
+```xml
+
+```
+
+2. Reference your sitemap in the `robots.txt` file:
+
+```plaintext
+User-agent: *
+Disallow:
+
+Sitemap: https://ccd-blue-book.vercel.app/sitemap.xml
+```
+
 ## Contributing
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
