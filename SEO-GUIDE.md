@@ -45,27 +45,10 @@ Ensure these meta tags are properly implemented in each page's `<head>` section:
 
 ```html
 <title>Page Title | IITG Bluebook</title>
-<meta name="description" content="Page-specific description">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ccd-blue-book.vercel.app">
 ```
 
-### Google Analytics (GA4)
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHVYVK9R2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CHHVYVK9R2');
-</script>
-```
-
-### Image Optimization
-- Use descriptive filenames: `google-software-engineer-interview.jpg` instead of `img001.jpg`
-- Always include alt text: `<img src="image.jpg" alt="Google software engineer interview preparation">`
-- Compress images to under 100KB where possible
 
 ### Rich Snippets Implementation
 Add JSON-LD structured data to experience pages:
