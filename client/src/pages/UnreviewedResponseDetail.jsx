@@ -77,7 +77,7 @@ const UnreviewedResponseDetail = () => {
           <div className="p-6">
             {/* Review Actions */}
             <div className="mb-6 flex justify-between items-center">
-              <Link to="/admin">
+              <Link to="/sysnA7-fexsop-tytfuw">
                 <button className="flex items-center gap-1 px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
                   <ChevronLeft className="h-4 w-4" /> Back to Admin Panel
                 </button>
