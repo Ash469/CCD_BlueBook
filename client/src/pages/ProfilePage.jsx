@@ -23,7 +23,7 @@ const ProfilePage = () => {
     role: 'All',
     branch: 'All',
     cpiRange: [6.0, 10.0],
-    yearOfPlacement: 'All',
+    yearOfIntern: 'All',
     interviewDifficulty: 'All',
     interviewMode: 'All',
   });
@@ -54,7 +54,7 @@ const ProfilePage = () => {
         setBranches(getUniqueValues(validData, 'branch'));
         setInterviewModes(getUniqueValues(validData, 'interviewMode'));
         setInterviewDifficulties(getUniqueValues(validData, 'interviewDifficulty'));
-        setYears(getUniqueValues(validData, 'yearOfPlacement'));
+        setYears(getUniqueValues(validData, 'yearOfIntern'));
         
         setLoading(false);
       } catch (err) {
@@ -104,8 +104,8 @@ const ProfilePage = () => {
         return cpi >= filters.cpiRange[0] && cpi <= filters.cpiRange[1];
       });
       
-      if (filters.yearOfPlacement !== 'All') {
-        filtered = filtered.filter(exp => String(exp.yearOfPlacement) === String(filters.yearOfPlacement));
+      if (filters.yearOfIntern !== 'All') {
+        filtered = filtered.filter(exp => String(exp.yearOfIntern) === String(filters.yearOfIntern));
       }
       
       if (filters.interviewDifficulty !== 'All') {

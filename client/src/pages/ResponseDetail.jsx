@@ -87,8 +87,26 @@ const ResponseDetail = () => {
                     <Briefcase className="h-3 w-3 mr-1" /> {response.role}
                   </span>
                   <span className="px-3 py-1 border border-gray-300 dark:border-gray-600 text-sm rounded-full flex items-center">
-                    <Calendar className="h-3 w-3 mr-1" /> {response.yearOfPlacement}
+                    <Calendar className="h-3 w-3 mr-1" /> {response.yearOfIntern}
                   </span>
+                  {response.interviewDifficulty && (
+                    <span
+                      className={`px-3 py-1 text-sm rounded-full flex border items-center
+                        ${
+                          response.interviewDifficulty === 'Easy'
+                          ? 'bg-green-100 text-green-800 border-green-800'
+                          : response.interviewDifficulty === 'Medium'
+                          ? 'bg-yellow-100 text-yellow-800 border-yellow-800'
+                          : response.interviewDifficulty === 'Hard'
+                          ? 'bg-orange-100 text-orange-800 border-orange-800'
+                          : 'bg-red-100 text-red-800 border-red-800'
+                        }
+                      `}
+                    >
+                      <HelpCircle className="h-3 w-3 mr-1" /> 
+                      {response.interviewDifficulty}
+                    </span>
+                  )}
                 </div>
               </div>
               

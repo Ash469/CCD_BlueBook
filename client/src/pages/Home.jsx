@@ -83,7 +83,7 @@ const Home = () => {
             icon="👥" 
             title="Experiences" 
             value={loading ? "..." : experiences.length} 
-            linkTo="/profiles"
+            linkTo="/search"
           />
         </section>
         

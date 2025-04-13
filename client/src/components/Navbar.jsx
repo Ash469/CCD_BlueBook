@@ -23,37 +23,30 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     </div>
                     
                     {/* Desktop Navigation */}
-                                        <div className="hidden md:flex space-x-1">
-                                            <NavLink to="/" active={isActive('/')}>Home</NavLink>
-                                            <NavLink to="/companies" active={isActive('/companies')}>Companies</NavLink>
-                                            <NavLink to="/roles" active={isActive('/roles')}>Roles</NavLink>
-                                            <NavLink to="/profiles" active={isActive('/profiles')}>Profiles</NavLink>
-                                            <NavLink to="https://iitg.ac.in/ccd/" active={isActive('https://iitg.ac.in/ccd/')}>
-                                                <span className="flex items-center">
-                                                    CCD
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                    </svg>
-                                                </span>
-                                            </NavLink>
-                                            <NavLink to="/submit" active={isActive('/submit')}>
-                                                <button className="bg-white text-blue-800 dark:bg-blue-200 dark:text-gray-900 px-3 py-1 rounded-md text-sm font-semibold hover:bg-blue-50 dark:hover:bg-blue-300 transition-colors">
-                                                    Submit Experience
-                                                </button>
-                                            </NavLink>
-                                            <button 
-                                                onClick={toggleDarkMode}
-                                                className="ml-2 p-2 rounded-full hover:bg-blue-700 dark:hover:bg-gray-800 transition-all duration-200"
-                                                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-                                            >
-                                                <IonIcon 
-                                                    className="text-[18px] text-white" 
-                                                    icon={darkMode ? sunnyOutline : moonOutline}
-                                                />
-                                            </button>
-                                        </div>
-                                        
-                                        {/* Mobile Menu Button */}
+                    <div className="hidden md:flex space-x-1">
+                        <NavLink to="/" active={isActive('/')}>Home</NavLink>
+                        <NavLink to="/companies" active={isActive('/companies')}>Companies</NavLink>
+                        <NavLink to="/roles" active={isActive('/roles')}>Roles</NavLink>
+                        <NavLink to="/profiles" active={isActive('/profiles')}>Profiles</NavLink>
+                        <NavLink to="/team" active={isActive('/team')}>Our Team</NavLink>
+                        <NavLink to="/submit" active={isActive('/submit')}>
+                            <button className="bg-white text-blue-800 dark:bg-blue-200 dark:text-gray-900 px-3 py-1 rounded-md text-sm font-semibold hover:bg-blue-50 dark:hover:bg-blue-300 transition-colors">
+                                Submit Experience
+                            </button>
+                        </NavLink>
+                        <button 
+                            onClick={toggleDarkMode}
+                            className="ml-2 p-2 rounded-full hover:bg-blue-700 dark:hover:bg-gray-800 transition-all duration-200"
+                            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                        >
+                            <IonIcon 
+                                className="text-[18px] text-white" 
+                                icon={darkMode ? sunnyOutline : moonOutline}
+                            />
+                        </button>
+                    </div>
+                    
+                    {/* Mobile Menu Button */}
                     <div className="md:hidden">
                         <button 
                             onClick={toggleMenu} 
@@ -75,7 +68,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                             <MobileNavLink to="/" active={isActive('/')}>Home</MobileNavLink>
                             <MobileNavLink to="/companies" active={isActive('/companies')}>Companies</MobileNavLink>
                             <MobileNavLink to="/profiles" active={isActive('/profiles')}>Profiles</MobileNavLink>
-                            <MobileNavLink to="https://iitg.ac.in/ccd/" active={isActive('https://iitg.ac.in/ccd/')}>CCD</MobileNavLink>
+                            <MobileNavLink to="/team" active={isActive('/team')}>Our Team</MobileNavLink>
+                            <MobileNavLink to="/search" active={isActive('/search')}>Search</MobileNavLink>
                             <MobileNavLink to="/submit" active={isActive('/submit')}>
                                 <span className="flex items-center">
                                     <span className="mr-2">Submit Experience</span>

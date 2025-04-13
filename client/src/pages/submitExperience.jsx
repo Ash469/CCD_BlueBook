@@ -11,7 +11,7 @@ const SubmitExperiencePage = () => {
     cpi: '',
     company: '',
     role: '',
-    yearOfPlacement: new Date().getFullYear(),
+    yearOfIntern: new Date().getFullYear(),
     interviewMode: '',
     interviewDifficulty: '',
     questionsAsked: '',
@@ -44,7 +44,7 @@ const SubmitExperiencePage = () => {
       const payload = {
         ...formData,
         cpi: parseFloat(formData.cpi),             // Convert to number
-        yearOfPlacement: parseInt(formData.yearOfPlacement)  // Convert to number
+        yearOfPlacement: parseInt(formData.yearOfIntern)  // Convert to number
       };
       
       const response = await axios.post(`${backendUrl}/experiences`, payload);
@@ -59,7 +59,7 @@ const SubmitExperiencePage = () => {
         cpi: '',
         company: '',
         role: '',
-        yearOfPlacement: new Date().getFullYear(),
+        yearOfIntern: new Date().getFullYear(),
         interviewMode: '',
         interviewDifficulty: '',
         questionsAsked: '',
@@ -153,11 +153,15 @@ const SubmitExperiencePage = () => {
                   >
                     <option value="">Select branch</option>
                     <option value="Computer Science">Computer Science</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="DSAI">DSAI</option>
                     <option value="Electrical Engineering">Electrical Engineering</option>
                     <option value="Mechanical Engineering">Mechanical Engineering</option>
                     <option value="Civil Engineering">Civil Engineering</option>
                     <option value="Chemical Engineering">Chemical Engineering</option>
+                    <option value="Chemical Science and Technology">Chemical Science and Technology</option>
                     <option value="Electronics & Communication">Electronics & Communication</option>
+                    <option value="Bioscience">BioScience</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
@@ -194,7 +198,7 @@ const SubmitExperiencePage = () => {
             
             {/* Placement Details Section */}
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Placement Details</h3>
+              <h3 className="text-lg font-medium">Internship Details</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -224,15 +228,15 @@ const SubmitExperiencePage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label htmlFor="yearOfPlacement" className="block mb-1 font-medium">Year of Placement *</label>
+                  <label htmlFor="yearOfIntern" className="block mb-1 font-medium">Year of Intern *</label>
                   <input
-                    id="yearOfPlacement"
-                    name="yearOfPlacement"
+                    id="yearOfIntern"
+                    name="yearOfIntern"
                     type="number"
                     min="2000"
                     max="2030"
                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#2D2E30] rounded-md"
-                    value={formData.yearOfPlacement}
+                    value={formData.yearOfIntern}
                     onChange={handleInputChange}
                     required
                   />

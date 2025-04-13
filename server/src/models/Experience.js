@@ -23,9 +23,9 @@ const experienceSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Job role is required']
   },
-  yearOfPlacement: {
+  yearOfIntern: {
     type: Number,
-    required: [true, 'Year of placement is required']
+    required: [true, 'Year of internship is required']
   },
   interviewMode: {
     type: String,
@@ -57,7 +57,7 @@ const experienceSchema = new mongoose.Schema({
   },
 }, {
   timestamps: true,
-  collection: 'internExperience'
+  collection: 'Experience'
 });
 
 module.exports = mongoose.model('Experience', experienceSchema);
