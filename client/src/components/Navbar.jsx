@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
-import { sunnyOutline, moonOutline, bookOutline, menuOutline, closeOutline } from 'ionicons/icons';
+import { sunnyOutline, moonOutline, menuOutline, closeOutline } from 'ionicons/icons';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
     const location = useLocation();
@@ -18,7 +18,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
                     <div className="flex items-center space-x-2">
-                        <IonIcon icon={bookOutline} className="h-6 w-6" />
+                        <img 
+                            src="iitg_logo.png" 
+                            alt="IITG Logo" 
+                            className="h-8 w-8"
+                        />
                         <Link to="/" className="text-xl font-bold">Bluebook</Link>
                     </div>
                     

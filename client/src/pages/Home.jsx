@@ -15,8 +15,8 @@ const Home = () => {
   const itemsPerPage = 3; 
   const startIndex = (currentPage-1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const displayedData = experiences.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(experiences.length / itemsPerPage);
+  const displayedData = experiences && experiences.length > 0 ? experiences.slice(startIndex, endIndex) : [];
+  const totalPages = Math.ceil((experiences?.length || 0) / itemsPerPage);
 
   const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000/api';
 
@@ -38,9 +38,13 @@ const Home = () => {
     fetchExperiences();
   }, [backendUrl]);
 
-
-  const uniqueCompanies = [...new Set(experiences.map(item => item.company))];
-  const uniqueRoles = [...new Set(experiences.map(item => item.role).filter(Boolean))];
+  const uniqueCompanies = experiences && experiences.length > 0 
+    ? [...new Set(experiences.map(item => item.company))]
+    : [];
+    
+  const uniqueRoles = experiences && experiences.length > 0
+    ? [...new Set(experiences.map(item => item.role).filter(Boolean))]
+    : [];
   
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-[#1D1E20] text-gray-700 dark:text-gray-300">
